@@ -101,19 +101,57 @@ h2:after{
     color: rgb(230, 126, 34);
     margin-bottom: 10px;
 }
+.icon-small{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color:rgb(230, 126, 34);
+    margin-right: 10px;
+    /** secrets to align text and icons**/
+    font-size: 100%;
+    vertical-align: middle;
+    margin-top: -8px;
+}
+.icon-testimonials {
+    color: #fff;
+    font-size: 130%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/*********** LINKS ************/
+
+a:link,
+a:visited{
+    color:rgb(230, 126, 34);
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgb(230, 126, 34);
+    transition: border-bottom 0.2s, color 0.2s;
+}
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+
 
 /******** BUTTONS ***********/
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type="submit"] {
     display: inline-block;
     padding: 10px 30px;
     text-decoration: none;
-    border-radius: 200px;
+    border-radius: 20px;
     transition: background-color 0.2s, color 0.2s, border 0.2s;
 }
 .btn-full:link,
-.btn-full:visited{
+.btn-full:visited,
+input[type="submit"]{
     background-color: #e67e22;
     border: 1px solid #e67e22;
     color: #fff;
@@ -125,7 +163,9 @@ h2:after{
     color: #e67e22;
 }
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
     background-color: rgb(230, 126, 34, 0.5); 
 }
 .btn-full:hover,
@@ -146,8 +186,10 @@ h2:after{
 header {
     background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0 , 0.7)), url(img/hero.jpg);
     height: 100vh;
+    width: 100%;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 .hero-text-box{
     position: absolute;
@@ -267,9 +309,195 @@ header {
     font-size: 150%;
     margin-right: 25px;
 }
-
+.btn-app:link,
+.btn-app:visited{
+    border: 0;
+}
 .btn-app img{
     height: 50px;
     width: auto;
     margin-right: 10px;
+}
+/****************************************/
+/* CITIES */
+/****************************************/
+
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.city-feature{
+    margin-bottom: 10px;
+}
+/****************************************/
+/* TESTIMONIALS */
+/****************************************/
+.section-testoimonials{
+    background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0 , 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    font-size: 90%;
+    margin: 10px;
+    line-height: 145%;
+    text-align: justify;
+}
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+/****************************************/
+/* SIGN UP */
+/****************************************/
+
+.section-plans{
+    background-color: #f4f4f4;
+}
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #c9c1c1;
+}
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.plan-box div:first-child{
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color:rgb(230, 126, 34);
+}
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;;
+}
+.plan-price-meal {
+    font-size: 80%;
+}
+.plan-box ul {
+    list-style: none;
+}
+.plan-box ul li{
+    padding: 5px 0 ;
+}
+
+/****************************************/
+/* CONTACT FORM */
+/****************************************/
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+.contact-form h3{
+    text-align: center;
+}
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+textarea {
+    width: 100%;
+    resize: none;
+}
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+*:focus {outline: none;}
+
+/****************************************/
+/* FOOTER */
+/****************************************/
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+.social-links {
+    list-style: none;
+    float: right;
+}
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin-right: 0;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: none;
+    color: #888;
+    transition: color 0.2s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ddd;
+}
+.social-links li a:link,
+.sosial-links li a:visited{
+    font-size: 160%;
+}
+.facebook,
+.twitter,
+.linkedin,
+.instagram{
+    transition: color 0.2s;
+}
+.facebook:hover {
+    color: #3b5999 ;
+}
+.twitter:hover {
+    color: #55acee ;
+}
+.linkedin:hover {
+    color: #0077B5 ;
+}
+.instagram:hover {
+    color: #e4405f ;
+}
+footer p{
+    color: #888 ;
+    text-align: center;
+    margin-top: 20px;
 }
